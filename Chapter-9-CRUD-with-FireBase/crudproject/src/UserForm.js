@@ -9,18 +9,17 @@ class UserForm extends Component {
   title;
   id;
 
-
   constructor(props) {
     super(props);
 
     this.errorUsername = '';
     this.errorEmail = '';
     this.title = 'New User';
-    this.id= this.props.match.params.id
+    this.id = this.props.match.params.id
 
     this.state ={
     	username: '',
-    	password: '',
+    	email: '',
     	usernameTouched: false,
     	emailTouched: false,
     };
@@ -89,14 +88,6 @@ class UserForm extends Component {
         return 'success';
       }
     }
-  }
-
-  getPasswordValidationState() {
-  	const length = this.state.password.length;
-  	if (this.state.passwordTouched) {
-  		if (length <3) return 'error';
-  		else return 'success';
-  	}
   }
 
   handleBlur(e) {
@@ -183,7 +174,7 @@ class UserForm extends Component {
         </FormGroup>
 
         <FormGroup controlId="formBasicText" 
-         validationState={this.getPasswordValidationState()}>
+         validationState={this.getEmailValidationState()}>
 	     
 	        <ControlLabel>Email</ControlLabel>
 	        <FormControl
