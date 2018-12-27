@@ -2,7 +2,14 @@
 
 `npm install firebase --save`
 
+`install --save react-bootstrap`
 
+`npm install --save react-router-dom` 
+
+# Glyphicon Logos CSS
+Edit `src/App.css` file to include Glyphicon stylesheet
+
+[Stackoverflow Why are my Glyphicons not appearing?](https://stackoverflow.com/questions/43863271/how-to-use-glyphicons-when-exporting-react-bootstap)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
